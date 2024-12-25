@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="icontainer">
+        <img src="#" alt="" id="sliderImage">
+    
+    <input type="button" value="next" id="next"> 
+    <input type="button" value="prev" id="prev"> 
+    </div>
+
+    
+
+    <script>
+
+        const imglist = [
+            "images/book.jpg",
+            "images/headphones.jpg",
+            "images/watch.jpg"
+        ];
+
+        // document.getElementById(icontainer); 
+        let currentindex=0;
+
+        const sliderImage = document.getElementById('sliderImage');
+
+        function updateImage(){
+            sliderImage.src=imglist[currentindex];
+        }
+
+        
+        document.getElementById('next').addEventListener('click',function(){
+            // alert('event listener triggered');
+
+            if (currentindex<imglist.length-1){
+                currentindex += 1;
+                updateImage();
+            }
+            
+           else{
+            alert('that was the last image');
+
+           };
+            
+
+        } 
+        )
+
+        document.getElementById('prev').addEventListener('click',function(){
+          
+           if (currentindex != 0){
+            currentindex -=1;
+            updateImage();
+           }
+
+           else{
+            alert('click next');
+           };
+        } 
+        )
+
+        updateImage();
+
+    </script>
+</body>
+</html>
+
+
+ <!-- IMAGES SHOULD BE STORED AS A LIST -->
+  <!-- NEXT>I+1  PREV>I-1 -->

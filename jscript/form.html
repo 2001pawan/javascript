@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input form</title>
+</head>
+<body>
+    <form action="" id ="form">
+        <input type="text" placeholder="fullname" id="name">
+        <input type="text" placeholder="number" id="number">
+        <input type="email" placeholder="email" id="email">
+        <button type="submit">submit</button>
+    </form>
+
+    <script src="form.js"></script>
+    <!-- <script>
+        
+        document.getElementById('form').addEventListener('submit',function(){
+
+            event.preventDefault();
+
+            const name =  document.getElementById('name').value;
+            const number =  document.getElementById('number').value;
+            const email =  document.getElementById('email').value;
+
+            localStorage.setItem('name',name);
+            localStorage.setItem('number',number);
+            localStorage.setItem('email',email);
+
+            window.location.href='display.html';
+        })
+
+    </script> -->
+</body>
+</html>
